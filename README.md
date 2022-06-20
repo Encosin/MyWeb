@@ -1,2 +1,2 @@
-# do_it_django
-Do it 장고 + 부스트엔드(프론트엔드 기초)
+# Django와 보완하는 web 공부를 위한 페이지!
+
