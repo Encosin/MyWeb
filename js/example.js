@@ -212,3 +212,48 @@ var fireBet = new Player('fireBet');
 */
 
 // 반복문 할 차례
+/* 
+1)
+for (var i =0; i<5; i++) {
+    console.log(i);
+}  // 변수 선언 시 const를 쓰면 값이 변경 불가함
+2)
+var i = 0;
+while(i<5) {
+    console.log(i);
+    i++;
+}*/
+
+var arr = [10, 20, 30, 40, 50];
+
+for(var i in arr) {
+    console.log(i);
+} // 결과 0 1 2 3 4 
+// for in 열거 속성을 통해 지정된 변수를 반복한다.
+
+
+// 배열의 경우 배열의 인덱스가 i에 할당되어 반복한다. 
+var obj = {
+    a: 1,
+    b: 2,
+};
+for (var key in obj) {
+    console.log(key + ' : ' + obj[key]);
+}
+// 결과 => a : 1, b : 2
+
+for (var i of arr) {
+    console.log(i);
+} // 결과 10 20 30 40 50
+
+/* of의 경우에는 배열의 값이 i에 할당되어 반복이 진행된다.
+혹은 forEach나 map을 이용하여 수행할 수 있다.*/
+
+arr.forEach((value, idx) => {
+    console.log(idx, value);
+}); // 0 1 2 3 4
+
+arr.map((value, idx)=> {
+    console.log(idx, value);
+}); // 10 20 30 40 50
+
